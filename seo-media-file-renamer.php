@@ -124,13 +124,35 @@ function seo_media_file_renamer_fields_to_edit( $form_fields, $post ) {
 	$form_fields['seo_media_file_renamer_input'] = array(
        	'label' => __( 'New file name:', 'seo-media-file-renamer' ),
    		'value' => '',
-		'helps' => sprintf( __( 'Enter a new file name in the field above. (current filename is %1$s)', 'seo-media-file-renamer'), '<strong>' . $orig_filename . '</strong>' )
+		'helps' => sprintf( __( 'Enter a new file name in the field above. (current filename is %1$s) <a href="#" onClick="%2$s">help</a>', 'seo-media-file-renamer' ), '<strong>' . $orig_filename . '</strong>', 'smfr_toggle(\'attachment-' . $post->ID . '\'); return false;' )
 	);
+	
 	$form_fields['original_media_file_name'] = array(
        	'label' => __( 'Original file name:', 'seo-media-file-renamer' ),
 		'input' => 'html',
 		'html' => "<input type='text' class='text' readonly='readonly' name='attachments[$post->ID][original_media_file_name]' value='" . esc_attr( $old_filename ) . "' /><br />",
-   		'value' => $old_filename
+   		'value' => $old_filename,
+		'helps' => '<div id="attachment-' . $post->ID . '" style="display:none">' . 
+					
+					'<ol>' .
+					'<li>' . __( 'All spaces are auto generated into dashes.', 'seo-media-file-renamer' ) . '</li>' .
+					'<li>' . __( 'File names are auto lowercased.', 'seo-media-file-renamer' ) . '</li>' .
+					'<li>' . __( 'File name extensions are automatically added if left out (taken from original file).', 'seo-media-file-renamer' ) . '</li>' .
+					'<li><a href="http://austinpassy.com">' . __( 'Built by Frosty', 'seo-media-file-renamer' ) . '</a></li>' .
+					'</ol>' .
+					
+					'</div>
+					<script type="text/javascript">
+					<!--
+						function smfr_toggle(id) {
+						   var e = document.getElementById(id);
+						   if ( e.style.display == \'block\' )
+							  e.style.display = \'none\';
+						   else
+							  e.style.display = \'block\';
+						}
+					//-->
+					</script>'
 	); //*/
 	//print '<pre>'; print_r( $form_fields ); print '</pre>';
 

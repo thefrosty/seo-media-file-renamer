@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SEO Media File Renamer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-25 10:07-0800\n"
-"PO-Revision-Date: 2012-04-25 10:11-0800\n"
+"POT-Creation-Date: 2012-04-25 11:29-0800\n"
+"PO-Revision-Date: 2012-04-25 11:29-0800\n"
 "Last-Translator: Austin Passy <austin@thefrosty.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -23,11 +23,27 @@ msgstr ""
 
 #: C:\xampp\htdocs\infieldbox\wp-content\plugins\seo-media-file-renamer/seo-media-file-renamer.php:127
 #, php-format
-msgid "Enter a new file name in the field above. (current filename is %1$s)"
+msgid "Enter a new file name in the field above. (current filename is %1$s) <a href=\"#\" onClick=\"%2$s\">help</a>"
 msgstr ""
 
-#: C:\xampp\htdocs\infieldbox\wp-content\plugins\seo-media-file-renamer/seo-media-file-renamer.php:130
+#: C:\xampp\htdocs\infieldbox\wp-content\plugins\seo-media-file-renamer/seo-media-file-renamer.php:131
 msgid "Original file name:"
+msgstr ""
+
+#: C:\xampp\htdocs\infieldbox\wp-content\plugins\seo-media-file-renamer/seo-media-file-renamer.php:138
+msgid "All spaces are auto generated into dashes."
+msgstr ""
+
+#: C:\xampp\htdocs\infieldbox\wp-content\plugins\seo-media-file-renamer/seo-media-file-renamer.php:139
+msgid "File names are auto lowercased."
+msgstr ""
+
+#: C:\xampp\htdocs\infieldbox\wp-content\plugins\seo-media-file-renamer/seo-media-file-renamer.php:140
+msgid "File name extensions are automatically added if left out (taken from original file)."
+msgstr ""
+
+#: C:\xampp\htdocs\infieldbox\wp-content\plugins\seo-media-file-renamer/seo-media-file-renamer.php:141
+msgid "Built by Frosty"
 msgstr ""
 
 #: C:\xampp\htdocs\infieldbox\wp-content\plugins\seo-media-file-renamer/updater.php:322
